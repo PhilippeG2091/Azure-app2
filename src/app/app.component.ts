@@ -2,8 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<div>Hello {{value}}</div>`,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  value = 'World';
+  loadedFeature = 'farmer';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
